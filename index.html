@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/instafeed.js"></script>
+</head>
+<body>
+    <h1>Test Instafeed.js</h1>
+
+    <!-- The target container for the images -->
+    <div id="instafeed"></div>
+
+    <!-- Configure and run instafeed -->
+    <script>
+        console.log(Instafeed)
+        var feed = new Instafeed({
+        accessToken: InstagramToken,
+        transform: function(item) {
+            var d = new Date(item.timestamp);
+            item.date = [d.getDate(), d.getMonth(), d.getYear()].join('/');
+            return item;
+        }
+        });
+        
+        feed.run();
+    </script>    
+</body>
+</html>
