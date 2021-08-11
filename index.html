@@ -21,7 +21,7 @@
     <script>
         console.log(Instafeed)
         var feed = new Instafeed({
-        accessToken: InstagramToken,
+        accessToken: "IGQVJVbG5aT05mSzVPalZAsM244OXRJZAUZA5RG9peVk2YlNtU3pkazliV3MxWUdFOFVjZAzF6a0xSczRKNlFSSjJkRUNwNlVZALTB2N0xka0lMa3ZAoSk4zYmExdG9VZAFdfZAGctLW43c2xWQVhXRFVqU1VtSmREUkI5NFpZAZAXlv",
         transform: function(item) {
             var d = new Date(item.timestamp);
             item.date = [d.getDate(), d.getMonth(), d.getYear()].join('/');
